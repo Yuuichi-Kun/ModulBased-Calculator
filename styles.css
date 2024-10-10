@@ -1,0 +1,137 @@
+/* General Styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Background Video */
+#background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* Anime Theme Calculator */
+.anime-theme .calculator {
+    border: 3px solid #ff79c6; /* Anime-style colors */
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(255, 121, 198, 0.5);
+}
+
+/* Input field */
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    color: #444;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Buttons styling */
+button {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #ff79c6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Anime Ace', sans-serif; /* Anime style font */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #bd93f9;
+}
+
+/* ... kode sebelumnya ... */
+
+/* Tambahan untuk riwayat */
+#history-container {
+    max-height: 200px; /* Batasi tinggi untuk minimize */
+    overflow-y: auto; /* Aktifkan scroll vertikal */
+    overflow-x: hidden; /* Sembunyikan scroll horizontal */
+    transition: max-height 0.3s ease; /* Transisi halus saat minimize */
+    border: 1px solid #ff79c6; /* Tambahkan border untuk membedakan area */
+    border-radius: 10px; /* Sudut membulat untuk border */
+    padding: 5px; /* Spasi di dalam area riwayat */
+}
+
+/* Card style for history items */
+.card {
+    background-color: #e1bee7; /* Warna latar belakang card */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Mengubah menjadi kolom */
+    align-items: flex-start;
+    margin-left: -40px; /* Rata kiri untuk teks */
+}
+
+/* Tombol hapus */
+.card button {
+    background-color: #ff4d4d; /* Warna tombol hapus */
+    padding: 1px 3px; /* Ukuran tombol lebih kecil dan tipis */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px; /* Ukuran font lebih kecil */
+    align-self: flex-end; /* Rata kanan untuk tombol */
+    margin-top: 5px; /* Memberikan jarak antara output dan tombol hapus */
+}
+
+/* Hover effect for delete button */
+.card button:hover {
+    background-color: #ff1a1a; /* Warna tombol hapus saat hover */
+}
+
+
+
+
+/* Toggle history button */
+#toggle-history {
+    margin-top: 10px; /* Memberikan spasi antara tombol minimize dan riwayat */
+}
+
+/* Responsive video */
+@media (min-aspect-ratio: 16/9) {
+    #background-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #background-video {
+        width: auto;
+        height: 100%;
+    }
+}
